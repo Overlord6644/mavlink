@@ -8411,7 +8411,7 @@
       <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot).</field>
       <field type="uint8_t" name="count">Number of servo channels reported.</field>
       <field type="uint16_t" name="online_flags">Bitmask of servos with fresh telemetry, bit 0 = servo 0.</field>
-      <field type="uint8_t[8]" name="servo_function">Actuator output function assigned to each channel, 0 if none.</field>
+      <field type="uint16_t[8]" name="servo_function">Actuator output function assigned to each reported slot (Servo1=201..., Peripheral via Actuator Set=301...), 0 if none.</field>
       <field type="float[8]" name="voltage" units="V">Servo supply voltage, NaN if unknown.</field>
       <field type="float[8]" name="current" units="A">Servo current, NaN if unknown.</field>
       <field type="int16_t[8]" name="temperature" units="degC">Servo temperature, INT16_MIN if unknown.</field>
