@@ -8405,8 +8405,10 @@
       <field type="int16_t" name="temperature" units="cdegC">Temperature</field>
       <field type="uint16_t" name="humidity" units="c%">Humidity</field>
     </message>
-    <!-- Custom message (Overlord6644/mavlink fork, fbus-servo-status branch): id in the private/experimental range. -->
-    <message id="52000" name="SERVO_STATUS">
+    <!-- Custom message (Overlord6644/mavlink fork, fbus-servo-status branch): 42110 extends the CUAV
+         private block (42100-42109, gcs/core cuav.xml). 52000 was tried first but collides with
+         csAirLink AIRLINK_AUTH in the "all" dialect QGC compiles. -->
+    <message id="42110" name="SERVO_STATUS">
       <description>Per-servo telemetry from a smart servo bus (e.g. FrSky FBUS Xact servos): supply voltage, current and temperature per servo channel.</description>
       <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot).</field>
       <field type="uint8_t" name="count">Number of servo channels reported.</field>
